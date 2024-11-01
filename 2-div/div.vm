@@ -1,0 +1,28 @@
+function div 0
+    push constant 0
+    pop temp 2
+
+    label COND
+    push argument 0
+    push argument 1
+    lt                  
+    if-goto END         
+
+    label LOOP
+
+    push argument 0
+    push argument 1
+    sub
+    pop argument 0        
+
+    push temp 2
+    push constant 1
+    add
+    pop temp 2           
+
+    goto COND
+
+    label END
+    push temp 2
+
+    return

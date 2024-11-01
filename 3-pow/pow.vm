@@ -1,0 +1,32 @@
+function pow 1
+    push constant 1
+    pop local 0
+
+    label TESTE
+    push argument 0
+    push constant 0
+    eq
+    if-goto END
+
+    label COND
+    push argument 1
+    push constant 0
+    eq
+    if-goto END 
+
+    label LOOP
+    push local 0
+    push argument 0
+    call mult 2
+    pop local 0
+
+    push argument 1
+    push constant 1
+    sub
+    pop argument 1
+
+    goto COND
+
+    label END
+    push local 0
+    return 
